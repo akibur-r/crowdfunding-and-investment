@@ -1,0 +1,16 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+
+  .left {
+    flex: 2;
+  }
+
+  .mid {
+    flex: 1;
+  }
+
+  .right {
+    flex: 2;
+  }
+}
