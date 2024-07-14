@@ -1,16 +1,55 @@
 nav {
+  max-height: min(64px, 10vh);
+  padding-left: min(5%, 32px);
+  padding-right: min(5%, 32px);
+  background-color: rgb(215, 169, 169);
+
   display: flex;
   justify-content: space-between;
 
+  a {
+    padding: 8px 12px;
+    border-radius: 4px; 
+  }
+  .bg-clr-fill {
+    background-color: #008765;
+    color: white;
+  }
+
+  .bg-white-fill {
+    background-color: #ffffff;
+    color: #000000;
+  }
+
   .left {
     flex: 2;
+    display: flex;
+    align-items: center;
+    gap: min(4px, 5vw);
+
+    .explore {
+      text-decoration: underline;
+      font-weight: bold;
+      color: #ffffff;
+    }
   }
 
   .mid {
     flex: 1;
+    display: flex;
+    justify-content: center;
+
+    .logo {
+      max-height: 100%;
+      width: auto;
+    }
   }
 
   .right {
     flex: 2;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: min(16px, 5vw);
   }
 }
