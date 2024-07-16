@@ -2,23 +2,13 @@ nav {
   max-height: min(64px, 10vh);
   padding-left: min(5%, 32px);
   padding-right: min(5%, 32px);
-  background-color: rgb(215, 169, 169);
 
   display: flex;
   justify-content: space-between;
 
   a {
     padding: 8px 12px;
-    border-radius: 4px; 
-  }
-  .bg-clr-fill {
-    background-color: #008765;
-    color: white;
-  }
-
-  .bg-white-fill {
-    background-color: #ffffff;
-    color: #000000;
+    border-radius: 4px;
   }
 
   .left {

@@ -1,9 +1,16 @@
 import "./navbar.scss";
+import LinkButton from "../button/button";
+
 function Navbar() {
     return (
         <nav>
             <div className="left">
-                <a href="#" className="bg-clr-fill">Start a Campaign</a>
+                <LinkButton
+                    text={"Start a Campaign"}
+                    type={"primary"}
+                    href={"#"}
+                    size={"regular"}
+                />
                 <a href="#" className="explore">Explore</a>
             </div>
             <div className="mid">
@@ -12,8 +19,18 @@ function Navbar() {
                 </a>
             </div>
             <div className="right">
-                <a href="#" className="login bg-white-fill">Login</a>
-                <a href="#" className="sign-up bg-clr-fill">Sign Up</a>
+                <LinkButton
+                    text={"Login"}
+                    type={"secondary"}
+                    href={"#"}
+                    size={"regular"}
+                />
+                <LinkButton
+                    text={"Sign Up"}
+                    type={"primary"}
+                    href={"#"}
+                    size={"regular"}
+                />
             </div>   
         </nav>
     )
