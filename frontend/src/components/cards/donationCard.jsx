@@ -2,14 +2,15 @@ import LinkButton from '../button/linkButton'
 import Progressbar from '../progressbar/progressbar'
 import './donationCard.scss'
 
-function DonationCard({title, owner, imageSource, raisedAmount, totalAmount, deadline}){
+function DonationCard({title, owner, imageSource, raisedAmount, totalAmount, deadline, category}){
   return (
     <div className='donationCard'>
         <div className="card-content">
-            <div className='image-container'>
+            <div className='header'>
+                <span className='category'>{category}</span>
                 <img src={`${imageSource}`} alt="Campaign Image" />
             </div>
-            <div className='heading'>
+            <div className='card-heading'>
                 <h4>{title}</h4>
                 <p>Author: <span>{owner}</span></p>
             </div>

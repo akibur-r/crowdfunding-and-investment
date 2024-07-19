@@ -7,7 +7,7 @@
     flex: 1;
     background-color: var(--clr-bg-white);
     border-radius: 15% 0px 0px 15%;
-    border: 1px solid black;
+    border: 1px solid var(--clr-black);
 
     display: flex;
     justify-content: center;
@@ -40,7 +40,7 @@
         width: 360px;
         border: none;
         outline: none;
-        border-bottom: 1px solid black;
+        border-bottom: 1px solid var(--clr-black);
         padding-left: 8px;
         font-size: 1rem;
       }

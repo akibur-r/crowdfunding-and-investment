@@ -3,13 +3,23 @@
 }
 
 .primary {
-  color: white;
-  background-color: #008765;
+  color: var(--clr-white);
+  background-color: var(--clr-primary);
 }
 
 .secondary {
-  color: black;
-  background-color: white;
+  color: var(--clr-black);
+  background-color: var(--clr-secondary);
+}
+
+.flat-white {
+  color: var(--clr-black);
+  background-color: whvar(--clr-white)ite;
+}
+
+.flat-black {
+  color: var(--clr-white);
+  background-color: var(--clr-black);
 }
 
 .regular {

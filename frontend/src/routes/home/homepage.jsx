@@ -1,4 +1,5 @@
 import LinkButton from '../../components/button/linkButton'
+import StatsBar from './statsBar'
 import './homepage.scss'
 
 function Homepage(){
@@ -16,6 +17,10 @@ function Homepage(){
         text={"See More"}
         size={"regular"}
         />
+      </div>
+
+      <div className="homepage-stats">
+        <StatsBar/>
       </div>
     </div>
   )

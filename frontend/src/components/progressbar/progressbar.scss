@@ -1,7 +1,7 @@
 .progressbar {
     .bar {
         width: 100%;
-        background-color: rgb(58, 58, 58);
+        background-color: var(--clr-gray-2);
         display: flex;
         border-radius: 4px;
 

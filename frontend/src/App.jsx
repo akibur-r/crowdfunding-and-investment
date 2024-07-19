@@ -1,9 +1,9 @@
-import Navbar from "./components/navbar/navbar";
-import DonationCard from "./components/cards/donationCard";
 import "./layout.scss";
+import "./utility.scss";
+import Navbar from "./components/navbar/navbar";
+import Campaigns from "./routes/home/campaigns";
 
 import Homepage from "./routes/home/homepage";
-import StatsBar from "./routes/home/statsBar"
 
 function App() {
   return (
@@ -12,7 +12,8 @@ function App() {
         <Navbar/>
       </div>
       <div className="content">
-        
+        <Homepage/>
+        <Campaigns/>
       </div>
     </div>
   )

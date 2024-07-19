@@ -1,7 +1,7 @@
 import './styledText.scss'
 import { Icon } from '@iconify-icon/react';
 
-function StyledText({icon, title, subtitle, color}){
+function StyledText({icon, title, subtitle}){
   return (
     <div className='styledText' >
         <div className="icon-container">

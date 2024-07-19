@@ -1,21 +1,14 @@
-.layout {
-  --clr-primary: #008765;
-  --clr-bg-white: #f5fdff;
-
-  max-width: 100%;
+.layout {  
   height: 100vh;
   background-color: var(--clr-bg-white);
   display: flex;
   flex-direction: column;
-  position: relative;
 
-  .Navbar {
-    width: 100%;
+  .navbar {
+    flex: 1;
   }
 
   .content {
     flex: 1;
-    display: flex;
-    flex-direction: column;
   }
 }
