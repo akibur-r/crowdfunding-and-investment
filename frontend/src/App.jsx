@@ -1,5 +1,5 @@
 import Navbar from "./components/navbar/navbar";
-import Login from "./components/auth/login";
+import DonationCard from "./components/cards/donationCard";
 import "./layout.scss";
 
 import Homepage from "./routes/home/homepage";
@@ -12,7 +12,7 @@ function App() {
         <Navbar/>
       </div>
       <div className="content">
-        <Login/>
+        
       </div>
     </div>
   )
