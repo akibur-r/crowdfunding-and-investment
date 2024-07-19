@@ -1,4 +1,4 @@
-import './button.scss'
+import './linkButton.scss'
 
 function LinkButton({text, type, href, size}){
   return (

@@ -1,14 +1,15 @@
 .layout {
+  --clr-primary: #008765;
+  --clr-bg-white: #f5fdff;
+
   max-width: 100%;
   height: 100vh;
-  background-color: #f5fdff;
+  background-color: var(--clr-bg-white);
   display: flex;
   flex-direction: column;
   position: relative;
 
   .Navbar {
-    position: absolute;
-    z-index: 1000 ;
     width: 100%;
   }
 

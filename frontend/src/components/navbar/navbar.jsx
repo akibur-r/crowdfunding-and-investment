@@ -1,5 +1,5 @@
+import LinkButton from "../button/linkButton";
 import "./navbar.scss";
-import LinkButton from "../button/button";
 
 function Navbar() {
     return (

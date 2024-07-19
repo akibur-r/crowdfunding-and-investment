@@ -1,4 +1,4 @@
-import LinkButton from '../../components/button/button'
+import LinkButton from '../../components/button/linkButton'
 import './homepage.scss'
 
 function Homepage(){
