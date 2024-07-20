@@ -3,7 +3,7 @@ import DonationCard from '../../components/cards/donationCard'
 
 function Campaigns(){
   return (
-    <div className='campaigns'>
+    <div className='home__campaigns'>
         <div className="campaigns-heading">
             <h3 className="title">Crowdfunding Campaigns</h3>
             <h3 className="explore"><a href="#">Explore</a></h3>

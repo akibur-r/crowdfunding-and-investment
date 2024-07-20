@@ -5,6 +5,7 @@ import Campaigns from "./routes/home/campaigns";
 
 import Homepage from "./routes/home/homepage";
 import DashboardMaster from "./routes/dashboard/dashboardMaster";
+import {Routes, Route, BrowserRouter} from 'react-router-dom'
 
 function App() {
   return (
@@ -13,7 +14,6 @@ function App() {
         <Navbar/>
       </div>
       <div className="content">
-        
         <DashboardMaster/>
       </div>
     </div>

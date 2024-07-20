@@ -7,9 +7,13 @@ if(amount==0) {
     amount = "N/A";
 }
 
+let placeIcon; 
+
+if(icon) placeIcon = <Icon icon={`${icon}`} className='icon'/>;
+
   return (
     <div className={`statsCard ${type}`}>
-        <Icon icon={`${icon}`} className='icon'/>
+        {placeIcon}
         <div className="statsCard__content">
             <h1 className="amount">
                 {amount}

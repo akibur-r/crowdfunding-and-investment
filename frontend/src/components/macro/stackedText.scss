@@ -1,0 +1,16 @@
+.stackedText {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: center;
+    width: fit-content;
+
+    .stackedText__content {
+        font-weight: bold;
+    }
+
+    .stackedText__title {
+        font-size: 0.9em;
+        color: var(--clr-gray-2);
+    }
+}
