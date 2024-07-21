@@ -1,0 +1,38 @@
+.form-container {
+    padding: 0 96px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    .formTitle {
+        color: var(--clr-primary);
+    }
+
+    .section {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        hr {
+            color: var(--clr-primary);
+            opacity: 0.8;
+        }
+
+        .type-category {
+            display: flex;
+            justify-content: space-between;
+
+            .type, .category {
+                display: flex;
+                flex-direction: column;
+                gap: 4px;
+            }
+            
+            .content {
+                display: flex;
+                gap: 8px;
+            }
+        }
+    }
+}

@@ -1,11 +1,8 @@
 import "./layout.scss";
 import "./utility.scss";
 import Navbar from "./components/navbar/navbar";
-import Campaigns from "./routes/home/campaigns";
 
-import Homepage from "./routes/home/homepage";
-import DashboardMaster from "./routes/dashboard/dashboardMaster";
-import {Routes, Route, BrowserRouter} from 'react-router-dom'
+import ViewCampaign from "./components/view/campaign/viewCampaign";
 
 function App() {
   return (
@@ -14,7 +11,7 @@ function App() {
         <Navbar/>
       </div>
       <div className="content">
-        <DashboardMaster/>
+        <ViewCampaign/>
       </div>
     </div>
   )

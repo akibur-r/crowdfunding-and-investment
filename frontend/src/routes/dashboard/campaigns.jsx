@@ -13,7 +13,7 @@ function Campaigns(){
                     href={"#"}
                     type={"primary"}
                     size={"regular"}
-                    icon={"fluent-mdl2:giftbox-open"}
+                    iconAfterText={"fluent-mdl2:giftbox-open"}
                 />
             </div>
         </div>

@@ -1,0 +1,159 @@
+.viewCampaign {
+    height: 100%;
+    padding: min(32px, 10vh) min(128px, 10%);
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+
+    .viewCampaign__overview {
+        height: min(720px, 40vh);
+        
+        display: flex;
+        gap: 16px;
+        
+        .viewCampaign__overview__thumbnail {
+            flex: 1;
+            position: relative;
+
+            img {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 12px;    
+                border: 1px solid var(--clr-black);
+            }
+        }
+
+        .viewCampaign__overview__details {
+            flex: 1;
+            
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+
+            .type {
+                display: flex;
+                gap: 16px;
+            }
+
+            .owner-details {    
+                position: relative;
+                height: min(48px, 100%);
+                display: flex;
+                gap: 12px;
+                
+                .profile-pic {
+                    img {
+                        position: relative;
+                        height: 100%;
+                        aspect-ratio: 1 / 1;
+                        background-color: black;
+                        border-radius: 50%;
+                        object-fit: cover;
+
+                        border: 2px solid var(--clr-primary);
+                        box-shadow: 0px 0px 5px var(--clr-primary);
+                    }
+                }
+
+                .info {
+                    font-size: 1.1rem;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    
+                    .history {
+                        font-size: 0.9em;
+                        color: var(--clr-gray-2);
+
+                        display: flex;
+                        gap: 4px;
+                    }
+                }
+            }
+
+            .campaign-details {
+                display: flex;
+                flex-direction: column;
+                gap: 4px;
+
+                .goal {
+                    span {
+                        font-weight: bold;
+                    }
+                }
+    
+                .created-at {
+                    span {
+                        font-weight: bold;
+                    }
+                }
+            }
+
+            
+        }
+    }
+
+    .viewCampaign__finance {
+        width: 100%;
+        background-color: var(--clr-primary);
+        padding: 40px;
+        border-radius: 16px;
+        color: var(--clr-white);
+
+        font-size: 1.1rem;
+        font-weight: bold;
+
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        
+        .info {
+            display: flex;
+            justify-content: space-between;
+
+            .left {
+                display: flex;
+                gap: 16px;
+
+                .dot {
+                    align-self: center;
+                 height: 4px;
+                 aspect-ratio: 1 / 1;
+                 background-color: var(--clr-white);   
+                 border-radius: 50%;
+                }
+            }
+        }
+    }
+
+    .viewCampaign__details {
+        display: flex;
+        gap: 32px;
+
+        .details {
+            flex: 13;
+            .test {
+                text-align: justify;
+                padding: 8px;
+                font-size: 1.1rem;
+            }
+
+
+        }
+
+        .top-donors {
+            flex: 2;
+            background-color: var(--clr-primary);
+            color: var(--clr-white);
+            height: fit-content;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 16px;
+        }
+    }
+}

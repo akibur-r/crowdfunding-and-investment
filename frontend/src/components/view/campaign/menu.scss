@@ -1,0 +1,22 @@
+.menu {
+    display: flex;
+    width: 100%;
+    gap: min(1%, 1px);
+    border-bottom: 4px solid var(--clr-primary);
+    padding-left: 8px;
+    
+    .menuItem {
+        padding: 8px 16px;
+        border-radius: 4px 4px 0 0;
+
+        &:hover {
+            background-color: var(--clr-primary);
+            color: var(--clr-white);
+        }
+    }
+
+    .active {
+        background-color: var(--clr-primary);
+        color: var(--clr-white);
+    }
+}
