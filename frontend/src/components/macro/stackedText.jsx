@@ -1,7 +1,8 @@
 import './stackedText.scss'
 
 function StackedText({title, amountInMoney, amountInNumber}){
-let amount;
+let amount = '0';
+
 if(amountInMoney) amount = '$' + amountInMoney;
 if(amountInNumber) amount = amountInNumber;
   return (

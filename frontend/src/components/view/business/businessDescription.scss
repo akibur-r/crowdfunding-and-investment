@@ -1,0 +1,18 @@
+.businessDescription {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    & > div {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .teamMembers {
+        display: flex;
+        gap: 2rem;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}

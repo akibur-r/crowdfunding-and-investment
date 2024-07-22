@@ -3,8 +3,10 @@ import "./utility.scss";
 import Navbar from "./components/navbar/navbar";
 import Signup from './components/auth/signup'
 
+import ViewBusiness from "./components/view/business/viewBusiness";
 import ViewCampaign from "./components/view/campaign/viewCampaign";
 import Homepage from "./routes/home/homepage";
+import Invest from "./components/transaction/invest";
 
 function App() {
   return (
@@ -13,7 +15,7 @@ function App() {
         <Navbar/>
       </div>
       <div className="content">
-        <Homepage/>
+        <Invest/>
       </div>
     </div>
   )

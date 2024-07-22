@@ -2,7 +2,7 @@ import './faq.scss'
 
 function FAQ(){
   return (
-    <div className='faq'>
+    <div className='faq' id='faq'>
         <h2>Frequently Asked Questions</h2>
         <div className="qna">
             <h3 className="question">What the fuck is this?</h3  >

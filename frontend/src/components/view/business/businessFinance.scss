@@ -1,0 +1,16 @@
+.upper-section {
+  font-size: 1.1rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+}
+
+.lower-section {
+  background-color: var(--clr-secondary);
+  color: var(--clr-black);
+  border-radius: 8px;
+
+  display: flex;
+  justify-content: space-around;
+  padding: 8px 0;
+}

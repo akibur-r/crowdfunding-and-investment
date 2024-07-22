@@ -1,10 +1,10 @@
 import './viewCampaign.scss'
-import Menu from './menu'
+import Menu from '../commonComponents/menu'
 import Test from './test'
 import Donor from './donor'
 import Finance from './finance'
 import Overview from './overview'
-import FAQ from './faq'
+import FAQ from '../commonComponents/faq'
 
 function ViewCampaign(){
   return (
