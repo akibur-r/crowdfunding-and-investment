@@ -1,6 +1,6 @@
 import StackedText from '../macro/stackedText'
 import StatusBox from '../macro/statusBox'
-import './kisuekta.scss'
+import './campaignCardHorizontal.scss'
 
 function Kisuekta({href, title, owner, category, isLive, donationGoal, raisedAmount, donorNumber, remainingDays}){
     let status;

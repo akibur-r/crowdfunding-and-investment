@@ -1,5 +1,5 @@
 import LinkButton from '../../components/button/linkButton'
-import Kisuekta from '../../components/kisuekta/kisuekta'
+import Kisuekta from '../../components/kisuekta/campaignCardHorizontal'
 import './campaigns.scss'
 
 function Campaigns(){

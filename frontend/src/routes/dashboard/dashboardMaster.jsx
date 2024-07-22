@@ -7,7 +7,7 @@ function DashboardMaster(){
   return (
     <div className='dashboardMaster'>
       <Sidebar/>
-      <Campaigns/>
+      <Dashboard/>
     </div>
   )
 }

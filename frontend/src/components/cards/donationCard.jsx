@@ -23,7 +23,7 @@ function DonationCard({title, owner, imageSource, raisedAmount, totalAmount, dea
                     <span className="totalAmount"> ${totalAmount}</span>
                 </div>
             </div>
-            <div className='footer'>
+            <div className='donationCard__footer'>
                 <div className="deadline">
                     Campaign ends in
                     <p>{deadline} days</p>

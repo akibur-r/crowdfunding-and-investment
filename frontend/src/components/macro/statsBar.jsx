@@ -1,4 +1,4 @@
-import StyledText from '../../components/styledText/styledText'
+import StyledText from '../styledText/styledText'
 import './statsBar.scss'
 
 function StatsBar(){
