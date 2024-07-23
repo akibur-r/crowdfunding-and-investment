@@ -1,0 +1,77 @@
+.alertMessage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    // height: calc(100vh - 64px); /// this needs change
+    height: 100%;
+    gap: 2rem;
+    
+    .icon {
+        font-size: 2rem;
+        aspect-ratio: 1 / 1;
+        text-align: center;
+        padding: 0.8rem;
+        border-radius: 50%;
+        background-color: var(--clr-primary);
+        color: var(--clr-white);
+    }
+
+    .alert {
+        box-sizing: border-box;
+        padding-bottom: 12px;
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+
+        max-width: 45%;
+        text-align: center;
+
+        font-size: 1.3em;
+        
+        .alertDetails {
+            font-size: 0.9em;
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: space-around;
+        width: 25%;
+        gap: 3rem;
+    }
+
+
+    //icon styles for different classes
+    .icon_primary {
+        background-color: var(--clr-primary);
+        color: var(--clr-white);
+    }
+    .icon_secondary {
+        background-color: var(--clr-secondary);
+        color: var(--clr-black);
+    }
+    .icon_red {
+        background-color: var(--clr-accent-red);
+        color: var(--clr-white);
+    }
+    .icon_green {
+        background-color: var(--clr-accent-green);
+        color: var(--clr-white);
+    }
+    .icon_yellow {
+        background-color: var(--clr-accent-yellow);
+        color: var(--clr-black);
+    }
+    .icon_black {
+        background-color: var(--clr-black);
+        color: var(--clr-white);
+    }
+    .icon_white {
+        background-color: var(--clr-white);
+        color: var(--clr-black);
+    }
+}

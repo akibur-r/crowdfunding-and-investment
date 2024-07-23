@@ -51,9 +51,10 @@
 }
 
 .bg_primary {
+    color: var(--clr-white-2);
     background-color: var(--clr-primary);
+    
     .teamMember__name {
         color: var(--clr-white);
     }
-    color: var(--clr-white-2);
 }
