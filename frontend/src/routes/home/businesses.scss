@@ -1,0 +1,24 @@
+.home__businesses {
+  background-color: var(--clr-white-1);
+  padding: 32px;
+
+  display: flex;
+  flex-direction: column;
+  gap: min(32px, 10vh);
+
+  .businesses-heading {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    color: var(--clr-black);
+
+    a {
+      text-decoration: underline;
+    }
+  }
+
+  .content {
+    display: flex;
+    gap: min(32px, 10%);
+  }
+}

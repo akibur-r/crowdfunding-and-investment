@@ -1,0 +1,48 @@
+.statsCard {
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
+
+  border-radius: min(16px, 50%);
+  padding: min(20px, 30%);
+  font-weight: bold;
+
+  .icon {
+    font-size: 2rem;
+    padding: 8px;
+    width: fit-content;
+
+    border-radius: 8px;
+  }
+
+  .statsCard__content {
+    display: flex;
+    flex-direction: column;
+    gap: min(32px, 2vh);
+
+    .title {
+        font-size: 1.1rem;
+        font-weight: 600;
+    }
+  }
+}
+
+.primary {
+  background-color: var(--clr-primary);
+  color: var(--clr-white);
+
+  .icon {
+    background-color: var(--clr-white);
+    color: var(--clr-primary);
+  }
+}
+
+.secondary {
+  background-color: var(--clr-secondary);
+  color: var(--clr-black);
+
+  .icon {
+    background-color: var(--clr-gray-2);
+    color: var(--clr-secondary);
+  }
+}

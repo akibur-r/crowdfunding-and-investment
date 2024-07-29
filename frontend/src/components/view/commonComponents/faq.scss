@@ -1,0 +1,17 @@
+.faq {
+
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    text-align: justify;
+
+    .qna {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+
+        .answer {
+            font-size: 1.1em;
+        }
+    }
+}

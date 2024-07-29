@@ -1,0 +1,17 @@
+.statusBox {
+    padding: 1px 12px;
+    border-radius: 2rem;
+    font-size: 0.9em;
+}
+
+.Statusbox__primary {
+    // background-color: var(--clr-primary);
+    color: var(--clr-primary);
+    border: 2px solid var(--clr-primary);
+}
+
+.Statusbox__secondary {
+    background-color: var(--clr-secondary);
+    color: var(--clr-black);
+    border: 2px solid var(--clr-accent-red);
+}

@@ -1,0 +1,77 @@
+.LinkButton {
+  display: flex;
+  gap: 1rem;
+  max-width: fit-content;
+}
+
+.size_regular {
+  padding: 8px 12px;
+  border-radius: 4px;
+}
+
+.size_small {
+  padding: 4px 8px;
+  border-radius: 4px;
+  max-width: fit-content;
+}
+
+.LinkButtonbg_primary {
+  color: var(--clr-white);
+  background-color: var(--clr-primary);
+}
+
+.LinkButtonbg_secondary  {
+  color: var(--clr-black);
+  background-color: var(--clr-secondary);
+}
+
+.LinkButtonbg_white  {
+  color: var(--clr-black);
+  background-color: var(--clr-white);
+}
+
+.LinkButtonbg_black  {
+  color: var(--clr-white);
+  background-color: var(--clr-black);
+}
+
+
+//outlined link buttons
+
+.fill_outline {
+  background-color: transparent;
+  border-width: 2%;
+  border-style: solid;
+}
+
+.LinkButtonbg_primary.fill_outline {
+  color: var(--clr-primary);
+  border-color: var(--clr-primary);
+}
+
+.LinkButtonbg_secondary.fill_outline  {
+  color: var(--clr-black);
+  border-color: var(--clr-secondary);
+}
+
+.LinkButtonbg_white.fill_outline  {
+  color: var(--clr-white);
+  border-color: var(--clr-white);
+}
+
+.LinkButtonbg_black.fill_outline  {
+  color: var(--clr-black);
+  border-color: var(--clr-black);
+}
+
+
+//icon styles
+.linkButton__iconAfterText {
+  flex: 1;
+  font-size: 1.1em;
+}
+
+.linkButton__iconBeforeText {
+  flex: 1;
+  padding-right: 4px;
+}

@@ -1,0 +1,93 @@
+.progressbar {
+    .bar {
+        width: 100%;
+        background-color: var(--clr-gray-2);
+        display: flex;
+        border-radius: 4px;        
+    }
+    
+    .progress {
+        height: 100%;
+        width: 20%; //****************************yet to configure*********************
+        background-color: var(--clr-primary);
+        border-radius: inherit;
+        display: flex;
+        align-items: center;
+        font-size: 0.8em;
+        padding-left: min(8px, 100%);
+        // font-weight: normal;
+    }
+
+    //primary background
+    .bc_primary, .pc_primary {
+        background-color: var(--clr-primary);
+        color: var(--clr-white);
+    }
+
+    //secondary background
+    .bc_secondary, .pc_secondary {
+        background-color: var(--clr-secondary);
+        color: var(--clr-black);
+    }
+
+    //gray backgrounds
+    .bc_gray-1, .pc_gray-1 {
+        background-color: var(--clr-gray-1);
+        color: var(--clr-white);
+    }
+    .bc_gray-2, .pc_gray-2 {
+        background-color: var(--clr-gray-2);
+        color: var(--clr-white);
+    }
+    .bc_gray-3, .pc_gray-3 {
+        background-color: var(--clr-gray-3);
+        color: var(--clr-white);
+    }
+
+    //white backgrounds
+    .bc_white, .pc_white {
+        background-color: var(--clr-white);
+        color: var(--clr-black);
+    }
+    .bc_white-1, .pc_white-1 {
+        background-color: var(--clr-white-1);
+        color: var(--clr-black);
+    }
+    .bc_white-2, .pc_white-2 {
+        background-color: var(--clr-white-2);
+        color: var(--clr-black);
+    }
+    .bc_white-3, .pc_white-3 {
+        background-color: var(--clr-white-3);
+        color: var(--clr-black);
+    }
+
+    .height_px4 {
+        height: 4px;
+    }
+    
+    .height_px8 {
+        height: 8px;
+    }
+    
+    .height_px12 {
+        height: 12px;
+    }
+    
+    .height_px16 {
+        height: 16px;
+    }
+    
+    .height_px20 {
+        height: 20px;
+    }
+    
+    .height_px24 {
+        height: 24px;
+    }
+    
+    .height_px32 {
+        height: 32px;
+    }
+    
+}

@@ -1,0 +1,16 @@
+.submitButton {
+
+    input {
+        font-size: 1rem;
+        padding: min(8px, 1vh) min(48px, 5vw)   ;
+        height: 40px;
+        border: none;
+        border-radius: 32px;
+
+
+        background-color: var(--clr-primary);
+        color: var(--clr-white);
+
+        cursor: pointer;
+    }
+}

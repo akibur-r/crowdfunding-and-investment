@@ -1,0 +1,31 @@
+.sidebar {
+  // width: 16vw;
+  flex: 3;
+  background-color: var(--clr-gray-1);
+  color: var(--clr-white);
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+
+  .sidebar__item {
+    font-size: 1rem;
+    display: flex;
+    gap: min(12px, 30%);
+    align-items: center;
+    justify-content: flex-start;
+    height: 72px;
+    width: 100%;
+    padding-left: min(64px, 25%);
+
+    &:hover {
+      background-color: var(--clr-gray-2);
+    }
+  }
+
+  .sidebar__dashboard {
+    background-color: var(--clr-gray-2);
+  }
+}

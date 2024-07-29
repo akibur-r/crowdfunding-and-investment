@@ -1,0 +1,25 @@
+.home__campaigns {
+    background-color: var(--clr-primary);
+    padding: 32px;
+
+    display: flex;
+    flex-direction: column;
+    gap: min(32px, 10vh);
+    flex-wrap: wrap;
+
+    .campaigns-heading {
+        display: flex;
+        justify-content: space-between;
+        font-size: 1rem;
+        color: var(--clr-white);
+
+        a {
+            text-decoration: underline;
+        }
+    }
+
+    .content {
+        display: flex; 
+        gap: min(32px, 10%);      
+    }
+}

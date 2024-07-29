@@ -1,0 +1,40 @@
+:root {
+  --clr-primary: #008765;
+  --clr-secondary: #fcc698;
+
+  --clr-accent-red: #ff6347;
+  --clr-accent-green: #1f9b55;
+  --clr-accent-yellow: #fffb27;
+  --clr-accent-purple: #c56bc1;
+  --clr-accent-white: #f5fdff;
+
+  --clr-dark: #222831;
+
+  --clr-white: #ffffff;
+  --clr-white-1: #f8f9fa;
+  --clr-white-2: #dee2e6;
+  --clr-white-3: #adb5bd;
+
+  --clr-black: #000000;
+
+  --clr-gray-1: #212529;
+  --clr-gray-2: #343a40;
+  --clr-gray-3: #6c757d;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style-position: inside;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}

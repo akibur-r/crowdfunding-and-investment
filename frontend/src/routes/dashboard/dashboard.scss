@@ -1,0 +1,91 @@
+.dashboard {
+  flex: 15;
+
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+
+  div {
+    width: 100%;
+  }
+
+  .info {
+    color: var(--clr-white);
+    font-size: 1.1rem;
+    border-radius: 16px;
+
+    flex: 2;
+    display: flex;
+    justify-content: space-between;
+
+    background-color: var(--clr-primary);
+
+    .profile-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 32px;
+
+      .personal {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: min(8px, 10%);
+      }
+
+      .donation {
+        display: flex;
+        gap: min(8px, 10%);
+        align-items: end;
+
+        font-size: 1.2rem;
+
+        .icon {
+          font-size: 1.5em;
+        }
+
+        .donationAmount {
+          font-weight: bold;
+        }
+      }
+    }
+
+    .profile-image {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      position: relative;
+      margin: 16px 0;
+      padding-right: 64px;
+
+      img {
+        background-color: var(--clr-gray-1);
+        position: absolute;
+        z-index: 0;
+        height: 100%;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        border-radius: 8px;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  .stats {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    gap: min(32px, 10%);
+
+    .content {
+      display: flex;
+      flex-direction: row;
+      gap: 32px;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+  }
+}
