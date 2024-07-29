@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import LinkButton from "../button/linkButton";
 import "./navbar.scss";
 
@@ -8,27 +9,27 @@ function Navbar() {
                 <LinkButton
                     text={"Start a Campaign"}
                     type={"primary"}
-                    href={"#"}
+                    href={"/start-a-campaign"}
                     size={"regular"}
                 />
-                <a href="#" className="explore">Explore</a>
+                <Link to="/explore" className="explore">Explore</Link>
             </div>
             <div className="mid">
-                <a href="#">
+                <Link to="/">
                     <img src="/logo.svg" alt="logo" className="logo"/>
-                </a>
+                </Link>
             </div>
             <div className="right">
                 <LinkButton
                     text={"Login"}
                     type={"secondary"}
-                    href={"#"}
+                    href={"/auth/login"}
                     size={"regular"}
                 />
                 <LinkButton
                     text={"Sign Up"}
                     type={"primary"}
-                    href={"#"}
+                    href={"/auth/signup"}
                     size={"regular"}
                 />
             </div>   

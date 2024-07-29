@@ -28,28 +28,28 @@ function Dashboard(){
                     titleLine2={"Donated"}
                     type={"primary"}
                     amount={8}
-                    icon={"fluent-mdl2:giftbox-open"}
+                    icon={"healthicons:money-bag"}
                 />
                 <StatsCard
                     titleLine1={"Total"}
                     titleLine2={"Invested"}
                     type={"secondary"}
                     amount={6}
-                    icon={"fluent-mdl2:giftbox-open"}
+                    icon={"raphael:dollar"}
                 />
                 <StatsCard
                     titleLine1={"Campaigns"}
                     titleLine2={"Created"}
                     type={"primary"}
                     amount={10}
-                    icon={"fluent-mdl2:giftbox-open"}
+                    icon={"material-symbols:campaign"}
                 />
                 <StatsCard
                     titleLine1={"Businesses"}
                     titleLine2={"Posted"}
                     type={"secondary"}
                     amount={0}
-                    icon={"fluent-mdl2:giftbox-open"}
+                    icon={"fluent:arrow-trending-sparkle-24-filled"}
                 />
             </div>
         </div>

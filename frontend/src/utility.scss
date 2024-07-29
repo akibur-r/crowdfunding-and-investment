@@ -34,3 +34,7 @@ a {
 ul {
   list-style-position: inside;
 }
+
+::-webkit-scrollbar {
+  display: none;
+}

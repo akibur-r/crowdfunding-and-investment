@@ -7,10 +7,10 @@ function RequestSuccessAlert(){
             message={"Request Sent Successfully"}
             detailsLine1={`Your investment request and details has been sent.`}
             detailsLine2={"Please wait for further response via your email."}
-            iconColor={"green"}
+            iconColor={"primary"}
+            icon={"icon-park-outline:message-success"}
             btn1Text={"Go Home"}
             btn1href={"#"}
-            icon={"lucide:hand-helping"}
             btnSize={"regular"}
             btnType={"secondary"}
         />

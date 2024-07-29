@@ -8,9 +8,9 @@ function PaymentFailed(){
             detailsLine1={`The payment attempt was unsuccessful.`}
             detailsLine2={`Please try again later.`}
             iconColor={"red"}
+            icon={"line-md:remove"}
             btn1Text={"Go Back"}
             btn1href={"#"}
-            icon={"lucide:hand-helping"}
             btnSize={"regular"}
             btnType={"secondary"}
         />

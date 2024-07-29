@@ -1,12 +1,12 @@
 .LinkButton {
-  box-sizing: border-box;
   display: flex;
+  gap: 1rem;
+  max-width: fit-content;
 }
 
 .size_regular {
   padding: 8px 12px;
   border-radius: 4px;
-  max-width: fit-content;
 }
 
 .size_small {
@@ -44,22 +44,22 @@
   border-style: solid;
 }
 
-.LinkButtonbg_primary + .fill_outline {
+.LinkButtonbg_primary.fill_outline {
   color: var(--clr-primary);
   border-color: var(--clr-primary);
 }
 
-.LinkButtonbg_secondary + .fill_outline  {
+.LinkButtonbg_secondary.fill_outline  {
   color: var(--clr-black);
   border-color: var(--clr-secondary);
 }
 
-.LinkButtonbg_white + .fill_outline  {
+.LinkButtonbg_white.fill_outline  {
   color: var(--clr-white);
   border-color: var(--clr-white);
 }
 
-.LinkButtonbg_black + .fill_outline  {
+.LinkButtonbg_black.fill_outline  {
   color: var(--clr-black);
   border-color: var(--clr-black);
 }
@@ -68,7 +68,7 @@
 //icon styles
 .linkButton__iconAfterText {
   flex: 1;
-  padding-left: 4px;
+  font-size: 1.1em;
 }
 
 .linkButton__iconBeforeText {

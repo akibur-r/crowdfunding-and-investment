@@ -12,7 +12,7 @@ function ViewCampaign(){
         {/* Overview section is in overview.jsx file */}
         <div className="viewCampaign__overview">
           <Overview
-            thumbnailSrc={"./images/bg.jpg"}
+            thumbnailSrc={"./bg.jpg"}
             category={"Charity"} type={"Personal"}
             title={"Kill the Hunger: A Lifesaving Project"}
             ownerProfilePicSrc={"./images/shafayet.png"}

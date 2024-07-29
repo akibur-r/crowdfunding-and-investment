@@ -3,7 +3,7 @@ import './teamMember.scss'
 function TeamMember({name, designation, profilePicSrc, keyPerson}){
 
   let bgcolor;
-  if(keyPerson=="YES") bgcolor = "primary";
+  if(keyPerson) bgcolor = "primary";
   else bgcolor = "secondary";
 
   return (

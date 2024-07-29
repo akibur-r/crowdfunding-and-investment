@@ -7,7 +7,7 @@ function AlertTest(){
             message={"Request Sent Successfully"}
             detailsLine1={`Your investment request and details has been sent.`}
             detailsLine2={"Please wait for further response via your email."}
-            iconColor={"white"}
+            iconColor={"green"}
             btn1Text={"Go Home"}
             btn1href={"#"}
             icon={"lucide:hand-helping"}

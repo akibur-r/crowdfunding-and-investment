@@ -15,7 +15,7 @@ function BusinessDescription(){
             <h2>Team Members</h2>
             <div className="teamMembers">
                 <TeamMember
-                    name={"Akibur Rahman"}
+                    name={"Akif Shaharier"}
                     designation={"CEO"}
                     profilePicSrc={"./images/akib.png"}
                     count={cnt++}
@@ -27,10 +27,11 @@ function BusinessDescription(){
                     count={cnt++}
                 />
                 <TeamMember
-                    name={"Akibur Rahman"}
+                    name={"Akram Sarkar"}
                     designation={"CEO"}
                     profilePicSrc={"./images/akib.png"}
                     count={cnt++}
+                    keyPerson={1}
                 />
                 <TeamMember
                     name={"Akibur Rahman"}

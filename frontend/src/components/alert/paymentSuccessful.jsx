@@ -6,10 +6,10 @@ function PaymentSuccessful(){
         <AlertMessage
             message={"Payment Successful!"}
             detailsLine1={`Thank you so much for the donation.`}
-            iconColor={"green"}
+            iconColor={"primary"}
+            icon={"line-md:check-all"}
             btn1Text={"Share the Campaign"}
             btn1href={"#"}
-            icon={"lucide:hand-helping"}
             btnSize={"regular"}
             btnType={"secondary"}
         />

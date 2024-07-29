@@ -14,7 +14,7 @@ function ViewBusiness(){
         {/* Overview section is in overview.jsx file */}
         <div className="viewBusiness__overview">
           <BusinessOverview
-            thumbnailSrc={"./images/shafayet.png"}
+            thumbnailSrc={"./public/images/shafayet.png"}
             category={"Tech"} 
             title={"Abahani Sportswear Ltd."}
             tagline={"Are kisu ekta dilam ja"}
