@@ -25,6 +25,7 @@ import Sidebar from "./routes/dashboard/sidebar";
 import Dashboard from "./routes/dashboard/dashboard";
 import Profile from "./routes/dashboard/profile";
 import Campaigns from "./routes/dashboard/campaigns";
+import Testing from "./testing";
 
 
 const router = createBrowserRouter([
@@ -132,7 +133,8 @@ function App() {
         <PaymentFailed/>
       </div> */}
 
-      <RouterProvider router={router} />
+      {/* <RouterProvider router={router} /> */}
+      <Testing/>
 
     </div>
   )

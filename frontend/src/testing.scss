@@ -1,0 +1,31 @@
+.testing {
+    .fs-and-fw{
+    font-weight: 100;
+    font-size:var(--fs-extra-small);
+    }
+    .fs-and-fw1{
+        font-weight: 200;
+        font-size: var(--fs-small);
+    }
+    .fs-and-fw2{
+        font-weight: 300;
+        font-size: var(--fs-regular);
+    }
+    .fs-and-fw4{
+        font-weight: 400;
+        font-size: var(--fs-medium);
+    }
+    .fs-and-fw5{
+        font-weight: 500;
+        font-size: var(--fs-large);
+    }
+    .fs-and-fw6{
+        font-weight: 600;
+        font-size: var(--fs-extra-large);
+    }
+    .fs-and-fw7{
+        font-weight: 700;
+        font-size: var(--fs-2x-extra-large);
+    }
+    
+}
