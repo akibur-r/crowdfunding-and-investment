@@ -13,10 +13,12 @@
     "antd": "^5.19.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-hook-form": "^7.52.1",
     "react-router-dom": "^6.25.1",
     "sass": "^1.77.8"
   },
   "devDependencies": {
+    "@hookform/devtools": "^4.3.1",
     "@iconify-icon/react": "^2.1.0",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",

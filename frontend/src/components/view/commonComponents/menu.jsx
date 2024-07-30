@@ -12,11 +12,11 @@ function Menu({isFor}){
       </div>
     )
   }
-  else {
+  else if(isFor=="campaign") {
     return (
       <div className='menu'>
-          <a href="#" className='menuItem active'>Description</a>
-          <a href="#" className='menuItem'>FAQ</a>
+          <a href="#details" className='menuItem active'>Description</a>
+          <a href="#faq" className='menuItem'>FAQ</a>
       </div>
     )
   }

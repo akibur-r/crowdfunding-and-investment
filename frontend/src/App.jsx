@@ -1,5 +1,5 @@
-import "./layout.scss";
 import "./utility.scss";
+import "./layout.scss";
 import Navbar from "./components/navbar/navbar";
 import Signup from './components/auth/signup'
 
@@ -25,6 +25,7 @@ import Sidebar from "./routes/dashboard/sidebar";
 import Dashboard from "./routes/dashboard/dashboard";
 import Profile from "./routes/dashboard/profile";
 import Campaigns from "./routes/dashboard/campaigns";
+import Test from "./testComponents/test";
 
 
 const router = createBrowserRouter([
@@ -133,6 +134,7 @@ function App() {
       </div> */}
 
       <RouterProvider router={router} />
+      {/* <Test/> */}
 
     </div>
   )

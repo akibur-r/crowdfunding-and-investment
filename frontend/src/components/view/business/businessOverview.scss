@@ -17,8 +17,9 @@
 
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  gap: min(32px, 10vh);
+  justify-content: space-between;
+  
+  // gap: min(32px, 10vh);
   padding-bottom: 50px;
 
   .type {

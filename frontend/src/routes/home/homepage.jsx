@@ -16,7 +16,7 @@ function Homepage(){
         <div className="home-content">
           <h1 className='heading'>Kill The Hunger: <br />A Lifesaving Project</h1>
           <LinkButton 
-          href={"#"}
+          href={"/explore/campaigns/1"}
           type={"primary"}
           text={"See More"}
           size={"regular"}

@@ -12,7 +12,7 @@ function ViewCampaign(){
         {/* Overview section is in overview.jsx file */}
         <div className="viewCampaign__overview">
           <Overview
-            thumbnailSrc={"./bg.jpg"}
+            thumbnailSrc={"./../../images/bg.jpg"}
             category={"Charity"} type={"Personal"}
             title={"Kill the Hunger: A Lifesaving Project"}
             ownerProfilePicSrc={"./images/shafayet.png"}
@@ -36,16 +36,19 @@ function ViewCampaign(){
 
         {/* Details section is in this file */} {/* Yet to configure this section */}
         <div className="viewCampaign__details">
-            <div className="details">
-              <Menu/>
+            <div className="details" id='details'>
+              <Menu isFor={"campaign"}/>
+              <div id="description">
+                <Test/>
+              </div>
               <FAQ/> 
             </div>
             <div className="top-donors">
                 <h3 className="title">Top Donors</h3>
                 <div className="donors">
-                        <Donor name={"Shafayet Nur"} address={"Chittagong, BD"} profilePicSrc={"./images/shafayet.png"}/>
-                        <Donor name={"Shohan Hyder"} address={"Chandpur, BD"} profilePicSrc={"./images/bg.jpg"}/>
-                        <Donor name={"Md. Akibur Rahman"} address={"Dhaka, BD"} profilePicSrc={"./images/akib.png"}/>
+                        <Donor name={"Shafayet Nur"} address={"Chittagong, BD"} profilePicSrc={"./../../images/shafayet.png"}/>
+                        <Donor name={"Akif Shaharier"} address={"Sandwip, BD"} profilePicSrc={"./../../images/akif.jpg"}/>
+                        <Donor name={"Md. Akibur Rahman"} address={"Dhaka, BD"} profilePicSrc={"./../../images/akib.png"}/>
                 </div>
             </div>
         </div>
