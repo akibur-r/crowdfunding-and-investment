@@ -3,63 +3,72 @@
         width: 100%;
         background-color: var(--clr-gray-2);
         display: flex;
+        justify-content: flex-start;
+        align-items: center;
         border-radius: 4px;        
+        position: relative;
     }
     
     .progress {
         height: 100%;
-        width: 20%; //****************************yet to configure*********************
+        // width: 20%; //****************************yet to configure*********************
         background-color: var(--clr-primary);
         border-radius: inherit;
         display: flex;
         align-items: center;
         font-size: 0.8em;
         padding-left: min(8px, 100%);
+        padding-left: 1rem;
         // font-weight: normal;
+        position: relative;
+    }
+
+    .text {
+        position: absolute;
+        font-size: 0.9em;
     }
 
     //primary background
     .bc_primary, .pc_primary {
         background-color: var(--clr-primary);
-        color: var(--clr-white);
     }
 
     //secondary background
     .bc_secondary, .pc_secondary {
         background-color: var(--clr-secondary);
-        color: var(--clr-black);
     }
 
     //gray backgrounds
     .bc_gray-1, .pc_gray-1 {
         background-color: var(--clr-gray-1);
-        color: var(--clr-white);
     }
     .bc_gray-2, .pc_gray-2 {
         background-color: var(--clr-gray-2);
-        color: var(--clr-white);
     }
     .bc_gray-3, .pc_gray-3 {
         background-color: var(--clr-gray-3);
-        color: var(--clr-white);
     }
 
     //white backgrounds
     .bc_white, .pc_white {
         background-color: var(--clr-white);
-        color: var(--clr-black);
     }
     .bc_white-1, .pc_white-1 {
         background-color: var(--clr-white-1);
-        color: var(--clr-black);
     }
     .bc_white-2, .pc_white-2 {
         background-color: var(--clr-white-2);
-        color: var(--clr-black);
     }
     .bc_white-3, .pc_white-3 {
         background-color: var(--clr-white-3);
-        color: var(--clr-black);
+    }
+
+    .pc_primary, .pc_gray-1, .pc_gray-2, .pc_gray-3 {
+        color: white;
+    }
+    
+    .pc_secondary, .pc_white-1, .pc_white-2, .pc_white-3, .pc_white {
+        color: black;
     }
 
     .height_px4 {

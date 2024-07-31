@@ -14,7 +14,8 @@ function Test(){
     I was a Big Dreamer but while growing up my confidence was stripped away due to the harmful situation at home and years of bullying at school.My confidence actually grew a lot in 2020, after my successful, first-ever crowdfunding campaign for my debut album, THANKS TO YOU who supported it!! You enabled me to believe that what I do counts and it makes a difference in the world!
     Will you also help me this time around to launch my 2nd album & bring our Superheroine ‘Harmonia’ into the world? `;
   return (
-    <div className='test'>
+    <div className='test' style={{display: "flex", flexDirection: "column", justifyContent: "flex-start", alignItems: "flex-start", gap: "8px"}}>
+      <h2>Test</h2>
         {omukText}
     </div>
   )

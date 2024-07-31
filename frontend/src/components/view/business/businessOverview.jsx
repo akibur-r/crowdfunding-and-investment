@@ -25,7 +25,7 @@ function BusinessOverview({thumbnailSrc, category, title, tagline, ownerProfileP
               <div className="info">
                 <h4 className="name">{ownerName}</h4>
                 <div className="history">
-                  <span className="Businesss">{ownerBusinesss} Businesss</span>
+                  <span className="Businesss">{ownerBusinesss} Businesses</span>
                   <span className="bar">|</span>
                   <span className="address">{ownerAddress}</span>
                   </div>

@@ -1,21 +1,26 @@
+import { Link } from 'react-router-dom'
 import SubmitButton from '../button/submitButton'
+import './auth.scss'
 import './login.scss'
 
 function Login(){
   return (
-    <div className='login'>
-        <div className="form-container">
-            <h1>Login</h1>
-            <div className="form">
-                <form action="#">
-                    <input type="email" name="Email" id="email" placeholder='Email' />
-                    <input type="password" name="Password" id="password" placeholder='Password' />
+    <div className='auth login'>
+        <div className="formContainer">
+            <form className='form' noValidate>
+                    <h1>Login</h1>
+                    <div className="form__inputHolder">
+                        <label htmlFor="email">Email</label>
+                        <input type="email" name="Email" id="email" placeholder='Enter Your Email' />
+                    </div>
+                    <div className="form__inputHolder">
+                        <label htmlFor="password">Password</label>
+                        <input type="password" name="Password" id="password" placeholder='Password' />
+                    </div>
                     <SubmitButton value={"Login"}/>
 
-                    <div>Don't have an account? <a href="#">Sign Up</a></div>
+                    <div className='form__bottomMessage'>Don't have an account? <Link to="/auth/signup">Sign Up</Link></div>
                 </form>
-                
-            </div>
         </div>
         
         {/* <div className="banner">
