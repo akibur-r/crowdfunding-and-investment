@@ -1,10 +1,10 @@
-import './viewCampaign.scss'
+import FAQ from '../commonComponents/faq'
 import Menu from '../commonComponents/menu'
-import Test from './test'
 import Donor from './donor'
 import Finance from './finance'
 import Overview from './overview'
-import FAQ from '../commonComponents/faq'
+import Test from './test'
+import './viewCampaign.scss'
 
 function ViewCampaign(){
   return (
@@ -27,7 +27,7 @@ function ViewCampaign(){
         {/* Finance section is in finance.jsx file */}
         <div className="viewCampaign__finance">
           <Finance
-            raisedPercentage={20}
+            raisedPercentage={64}
             remainingDays={17}
             donationGoal={100000}
             raisedAmount={100}
@@ -38,10 +38,10 @@ function ViewCampaign(){
         <div className="viewCampaign__details">
             <div className="details" id='details'>
               <Menu isFor={"campaign"}/>
-              <div id="description">
+              <div id="description" className='description'>
                 <Test/>
+                <FAQ/> 
               </div>
-              <FAQ/> 
             </div>
             <div className="top-donors">
                 <h3 className="title">Top Donors</h3>

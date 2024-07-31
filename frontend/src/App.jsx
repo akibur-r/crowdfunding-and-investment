@@ -1,5 +1,5 @@
-import "./utility.scss";
 import "./layout.scss";
+import "./utility.scss";
 import Navbar from "./components/navbar/navbar";
 import Signup from './components/auth/signup'
 

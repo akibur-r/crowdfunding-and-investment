@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import SubmitButton from '../button/submitButton'
 import './auth.scss'
 import './signup.scss'
@@ -7,7 +8,7 @@ function SignUp(){
     <div className='auth signup'>
         <div className="formContainer">
             <form className='form' noValidate>
-                    <h1>Login</h1>
+                    <h1>Sign Up</h1>
                     <div className="form__inputHolder">
                         <label htmlFor="name">Name</label>
                         <input type="text" name="fullname" id="fullname" placeholder='e.g. John Doe' />
@@ -28,9 +29,9 @@ function SignUp(){
                         <label htmlFor="confirmPassword">Confirm Password</label>
                         <input type="password" name="confirmPassword" id="confirmPassword" placeholder='Type Your Password Again' />
                     </div>
-                    <SubmitButton value={"Login"}/>
+                    <SubmitButton value={"Sign Up"}/>
 
-                    <div className='form__bottomMessage'>Don't have an account? <a href="#">Sign Up</a></div>
+                    <div className='form__bottomMessage'>Don't have an account? <Link to="/auth/login">Login</Link></div>
                 </form>
         </div>
         

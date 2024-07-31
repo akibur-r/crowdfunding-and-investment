@@ -7,10 +7,12 @@
 .size_regular {
   padding: 8px 12px;
   border-radius: 4px;
+  max-width: fit-content;
 }
 
 .size_small {
-  padding: 4px 8px;
+  font-size: 100%;
+  padding: 4% 6%;
   border-radius: 4px;
   max-width: fit-content;
 }

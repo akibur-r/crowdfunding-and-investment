@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import SubmitButton from '../button/submitButton'
 import './auth.scss'
 import './login.scss'
@@ -18,7 +19,7 @@ function Login(){
                     </div>
                     <SubmitButton value={"Login"}/>
 
-                    <div className='form__bottomMessage'>Don't have an account? <a href="#">Sign Up</a></div>
+                    <div className='form__bottomMessage'>Don't have an account? <Link to="/auth/signup">Sign Up</Link></div>
                 </form>
         </div>
         
