@@ -1,0 +1,134 @@
+.largeForm {
+  // background-color: rebeccapurple;
+//   height: 100%;
+  padding: 0 min(128px, 30vw) 4rem min(128px, 30vw);
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  input[type="text"], 
+  input[type="date"], 
+  textarea,
+  select {
+    padding: 0.5rem 0;
+    padding-left: 0.5rem;
+    outline: none;
+    border: 1px solid var(--clr-gray-3);
+    border-radius: 4px;
+    width: min(196px, 20vw);
+  }
+
+  textarea {
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+  }
+
+  .heading {
+    color: var(--clr-primary);
+    margin-top: 1rem;
+  }
+
+  .largeForm__section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+
+    .horizontalLine {
+      border: 0.1px solid var(--clr-primary);
+      background-color: var(--clr-primary);
+      opacity: 0.5;
+    }
+
+    .largeForm__section__subsection {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .largeForm__field {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+
+      .largeForm__field__heading {
+        font-size: 1.05rem;
+      }
+
+      .largeForm__field__content {
+        font-size: 0.9em;
+        display: flex;
+        gap: 2rem;
+      }
+
+      .largeForm__field__radioButton {
+        display: flex;
+        gap: 0.5rem;
+      }
+
+      .largeForm__field__dropdown {
+        // appearance: none;
+        outline: none;
+        cursor: pointer;
+
+        // height: min(2rem, 5vh);
+
+        border: 1px solid var(--clr-gray-3);
+        border-radius: 4px;
+
+        padding-left: 0.5rem;
+      }
+
+      .campaignTitle {
+        width: 100%;
+      }
+
+      .coverImageContainer {
+        width: 100%;
+        aspect-ratio: 10 / 2;
+        border: 1px solid var(--clr-gray-3);
+        // height: min(144px, 20vh);
+        border-radius: 4px;
+        cursor: pointer;
+
+        .coverImageContainer__beforeUpload {
+            height: 100%;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+
+            .icon {
+                font-size: 2.5em;
+                color: var(--clr-primary);
+            }
+
+            .text {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                font-size: 0.9em;
+
+                .bold {
+                    font-weight: 700;
+                }
+            }
+        }
+      }
+
+      .textarea {
+        height: min(20vh, 144px);
+        max-width: 100%;
+        min-width: 100%;
+      }
+    }
+  }
+
+  .largeForm__submitSection {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  
+}

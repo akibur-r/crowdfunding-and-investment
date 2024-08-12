@@ -26,6 +26,7 @@ import Dashboard from "./routes/dashboard/dashboard";
 import Profile from "./routes/dashboard/profile";
 import Campaigns from "./routes/dashboard/campaigns";
 import Test from "./testComponents/test";
+import CreateCampaign from "./components/largeForms/createCampaign";
 
 
 const router = createBrowserRouter([
@@ -44,7 +45,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/start-a-campaign",
-        element: <h1>Start a Campaign</h1>
+        element: <CreateCampaign/>
       },
       {
         path: "/explore",
