@@ -28,6 +28,7 @@ const authUser=asyncHandler(async(req,res)=>{
 // @access  public
 const registerUser=asyncHandler(async(req,res)=>{
     const {name,email,password,phoneNumber,confirmPassword}=req.body;
+    console.log(req.body);
     const userExists=await User.findOne({email});
     if(userExists){
         res.status(400);
@@ -43,6 +44,7 @@ const registerUser=asyncHandler(async(req,res)=>{
         phoneNumber,
         email,
         password,
+        confirmPassword
 
     });
     if(user){
