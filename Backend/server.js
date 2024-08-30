@@ -5,6 +5,7 @@ import dotenv from 'dotenv';
 import { notFound,errorHandler } from './middleware/errorMiddleware.js';
 import cookieParser from 'cookie-parser';
 import cors from 'cors'
+//fuck akib
 dotenv.config()
 
 const port= process.env.PORT||5000;
