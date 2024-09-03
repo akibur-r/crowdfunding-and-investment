@@ -1,12 +1,13 @@
-import './businesses.scss'
+import './campaigns.scss'
 import DonationCard from '../../components/cards/donationCard'
+import { Link } from 'react-router-dom'
 
-function Businesses(){
+function Campaigns(){
   return (
-    <div className='home__businesses'>
-        <div className="businesses-heading">
-            <h3 className="title">Crowdfunding businesses</h3>
-            <h3 className="explore"><a href="#">Explore</a></h3>
+    <div className='home__campaigns'>
+        <div className="campaigns-heading">
+            <h3 className="title">Crowdfunding Campaigns</h3>
+            <h3 className="explore"><Link to="explore">Explore</Link></h3>
         </div>
 
         <div className="content">
@@ -59,4 +60,4 @@ function Businesses(){
   )
 }
 
-export default Businesses
+export default Campaigns

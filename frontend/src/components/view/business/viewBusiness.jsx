@@ -1,12 +1,10 @@
-import './viewBusiness.scss'
-import Menu from '../commonComponents/menu'
-import Test from './test'
-import Donor from './teamMember'
-import BusinessFinance from './businessFinance'
-import BusinessOverview from './businessOverview'
 import FAQ from '../commonComponents/faq'
-import BusinessHighlights from './businessHighlights'
+import Menu from '../commonComponents/menu'
 import BusinessDescription from './businessDescription'
+import BusinessFinance from './businessFinance'
+import BusinessHighlights from './businessHighlights'
+import BusinessOverview from './businessOverview'
+import './viewBusiness.scss'
 
 function ViewBusiness(){
   return (

@@ -1,0 +1,40 @@
+.explore {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0 2rem;
+
+  .explore__filter {
+    ul {
+      list-style-type: none;
+
+      display: flex;
+      gap: 0.25rem;
+      li {
+        font-weight: bold;
+        padding: 0.25rem 0.5rem;
+        background-color: var(--clr-secondary);
+        color: var(--clr-black);
+        cursor: pointer;
+        border-radius: 0.25rem;
+        transition-duration: 200ms;
+
+        &:hover {
+          background-color: var(--clr-primary);
+          color: var(--clr-white);
+        }
+      }
+
+      .active {
+        background-color: var(--clr-primary);
+        color: var(--clr-white);
+      }
+    }
+  }
+
+  .explore__content {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+}

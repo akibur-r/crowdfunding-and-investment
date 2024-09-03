@@ -5,12 +5,27 @@
     align-items: center;
     width: fit-content;
 
+    padding: 0.4rem;
+    border-radius: 0.4rem;
+
     .stackedText__content {
         font-weight: bold;
     }
 
     .stackedText__title {
         font-size: 0.9em;
-        color: var(--clr-gray-2);
+        color: var(--clr-white);
     }
+}
+
+.sz_small {
+    font-size: 0.9rem;
+}
+
+.sz_regular {
+    font-size: 1rem;
+} 
+
+.bg_primary {
+    background-color: var(--clr-primary);
 }

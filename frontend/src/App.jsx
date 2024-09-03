@@ -1,32 +1,20 @@
+import Signup from './components/auth/signup';
+import Navbar from "./components/navbar/navbar";
 import "./layout.scss";
 import "./utility.scss";
-import Navbar from "./components/navbar/navbar";
-import Signup from './components/auth/signup'
 
+import Login from './components/auth/login';
+import Homepage from "./components/home/homepage";
 import ViewBusiness from "./components/view/business/viewBusiness";
 import ViewCampaign from "./components/view/campaign/viewCampaign";
-import Homepage from "./routes/home/homepage";
-import Invest from "./components/transaction/invest";
-import AlertTest from "./components/alert/alertTest";
-import RequestSuccessAlert from "./components/alert/requestSuccessAlert";
-import RequestFailedAlert from "./components/alert/requestFailedAlert";
-import PublishedAlert from "./components/alert/publishedAlert";
-import PaymentSuccessful from "./components/alert/paymentSuccessful";
-import PaymentFailed from "./components/alert/paymentFailed";
-import DashboardMaster from './routes/dashboard/dashboardMaster'
-import Login from './components/auth/login'
 
-import * as React from "react";
-import { ReactDOM } from "react-dom/client";
-import {createBrowserRouter, RouterProvider, Link, Outlet, Router, Route, Routes} from 'react-router-dom'
-import Home from "./components/home/home";
-import Landingpage from "./components/home/landingpage";
-import Sidebar from "./routes/dashboard/sidebar";
-import Dashboard from "./routes/dashboard/dashboard";
-import Profile from "./routes/dashboard/profile";
-import Campaigns from "./routes/dashboard/campaigns";
-import Test from "./testComponents/test";
+import { createBrowserRouter, Link, Outlet, RouterProvider } from 'react-router-dom';
+import Campaigns from "./components/dashboard/campaigns";
+import Dashboard from "./components/dashboard/dashboard";
+import Profile from "./components/dashboard/profile";
+import Sidebar from "./components/dashboard/sidebar";
 import CreateCampaign from "./components/largeForms/createCampaign";
+import Explore from './components/explore/explore';
 
 
 const router = createBrowserRouter([
@@ -52,7 +40,7 @@ const router = createBrowserRouter([
         children: [
           {
             path: "/explore",
-            element: <h1>Explore</h1>
+            element: <Explore/>
           },
           {
             path: "/explore/campaigns",
