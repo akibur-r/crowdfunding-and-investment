@@ -1,6 +1,6 @@
 import { Icon } from '@iconify-icon/react';
 import './dashboard.scss'
-import StatsCard from '../../components/cards/statsCard';
+import StatsCard from '../cards/statsCard';
 
 function Dashboard(){
   return (

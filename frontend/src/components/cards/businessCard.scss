@@ -1,0 +1,14 @@
+.businessCard {
+  .card__content {
+
+    .businessCard__finance {
+        grid-row: 8 / 10;
+        display: flex;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+
+        align-items: center;
+        justify-content: center;
+    }
+  }
+}
