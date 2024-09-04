@@ -5,57 +5,60 @@ import User from '../models/userModel.js'
 
 // @desc     Auth user/set token
 // route     POST /api/users/auth
-// @access  public
+// @access   public
 const authUser=asyncHandler(async(req,res)=>{
     const {email,password}=req.body;
     const user =await User.findOne({email});
     if(user && (await user.matchPassword(password))){
-        generateToken(res,user._id);
+        const accessToken=generateToken(res,user._id);
+        console.log(accessToken);
         res.status(201).json({
             _id: user._id,
             name: user.name,
             phoneNumber: user.phoneNumber,
             email: user.email,
+            accessToken
         });
     }else{
         res.status(401);
         throw new Error('Invalid email or password');
     }
 });
-
 // @desc     Register a new user 
 // route     POST /api/users
-// @access  public
-const registerUser=asyncHandler(async(req,res)=>{
-    const {name,email,password,phoneNumber,confirmPassword}=req.body;
-    //console.log(req.body);
-    const userExists=await User.findOne({email});
-    if(userExists){
+// @access   public
+const registerUser = asyncHandler(async (req, res) => {
+    const { name, email, password, phoneNumber, confirmPassword } = req.body;
+
+    // Check if user already exists
+    const userExists = await User.findOne({ email });
+    if (userExists) {
         res.status(400);
-        throw new Error('User already exist');
+        throw new Error('User already exists');
     }
-    if(password!==confirmPassword){
+    // Validate password and confirmPassword match
+    if (password !== confirmPassword) {
         return res.status(400).json({
-             message:"password doesn't match"
-         })
-     }
-    const user=await User.create({
+            message: "Password and confirm password do not match"
+        });
+    }
+
+    // Create user
+    const user = await User.create({
         name,
         phoneNumber,
         email,
-        password,
-        confirmPassword
-
+        password
     });
-    if(user){
-        generateToken(res,user._id);
+    if (user) {
+        generateToken(res, user._id);
         res.status(201).json({
             _id: user._id,
             name: user.name,
             phoneNumber: user.phoneNumber,
             email: user.email
         });
-    }else{
+    } else {
         res.status(400);
         throw new Error('Invalid user data');
     }
