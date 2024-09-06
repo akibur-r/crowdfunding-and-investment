@@ -9,9 +9,9 @@ function LinkButton({text, type, href, size, iconBeforeText, iconAfterText, bgFi
   if(iconAfterText) placeIconAfterText = <Icon icon={`${iconAfterText}`} className='linkButton__iconAfterText'/>;
   
   return (
-    <Link to={href} className=''>
+    <Link to={href} className='LinkButton'>
 
-      <div className={`LinkButton LinkButtonbg_${type} size_${size} fill_${bgFill}`} >
+      <div className={`LinkButtonbg_${type} size_${size} fill_${bgFill}`} >
         {/*button icon after text*/} {placeIconBeforeText}
         {/*button content*/} <span>{text}</span>
         {/* button icon after text */} {placeIconAfterText}

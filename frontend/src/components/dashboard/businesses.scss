@@ -1,0 +1,24 @@
+.dashboard__campaigns {
+    background-color: var(--clr-accent-white); //this needs change
+    flex: 15;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    .dashboard__campaigns__heading {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .dashboard__campaigns__filter {
+        margin-top: 16px;
+        display: flex;
+        gap: min(96px, 10vw);
+    }
+
+    .dashboard__campaigns__content {
+        display: flex;
+        flex-direction: column;
+        gap: min(16px, 10vh);
+    }
+}

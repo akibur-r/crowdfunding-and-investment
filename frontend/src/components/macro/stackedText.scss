@@ -14,12 +14,11 @@
 
     .stackedText__title {
         font-size: 0.9em;
-        color: var(--clr-white);
     }
 }
 
 .sz_small {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
 }
 
 .sz_regular {
@@ -28,4 +27,10 @@
 
 .bg_primary {
     background-color: var(--clr-primary);
+    color: var(--clr-white);
+}
+
+.bg_secondary {
+    background-color: var(--clr-secondary);
+    color: var(--clr-black);
 }

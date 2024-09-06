@@ -10,5 +10,11 @@
         align-items: center;
         justify-content: center;
     }
+
+    .businessCard__viewMore {
+      grid-row: 10 / 11;
+      display: flex;
+      justify-content: center;
+    }
   }
 }

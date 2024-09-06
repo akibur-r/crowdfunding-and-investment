@@ -4,9 +4,11 @@ import Dashboard from './dashboard'
 import Profile from './profile'
 import './dashboardMaster.scss'
 
-function DashboardMaster(outletElement){
+function DashboardMaster({outletElement}){
   return (
     <div className='dashboardMaster'>
+      <Sidebar/>
+      {outletElement}
     </div>
   )
 }

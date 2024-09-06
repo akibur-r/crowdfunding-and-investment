@@ -8,13 +8,13 @@ import Homepage from "./components/home/homepage";
 import ViewBusiness from "./components/view/business/viewBusiness";
 import ViewCampaign from "./components/view/campaign/viewCampaign";
 
-import { createBrowserRouter, Link, Outlet, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, Link, Navigate, Outlet, RouterProvider } from 'react-router-dom';
 import Campaigns from "./components/dashboard/campaigns";
 import Dashboard from "./components/dashboard/dashboard";
 import Profile from "./components/dashboard/profile";
 import Sidebar from "./components/dashboard/sidebar";
-import CreateCampaign from "./components/largeForms/createCampaign";
 import Explore from './components/explore/explore';
+import CreateCampaign from "./components/largeForms/createCampaign";
 
 
 const router = createBrowserRouter([
@@ -84,25 +84,30 @@ const router = createBrowserRouter([
       {
         path: "/dashboard",
         element: 
-        <div className='dashboardMaster'>
+        <div className='dashboardLayout'>
           <Sidebar/>
           <Outlet/>
         </div>,
         children: [
           {
-            path: "/dashboard/overview",
-            element: <Dashboard/>
+            path: "",
+            element: <Navigate to={"/dashboard/overview"} replace/>
           },
           {
-            path: "/dashboard/profile",
+            path: "overview",
+            element: <Dashboard/>,
+            index: true
+          },
+          {
+            path: "profile",
             element: <Profile/>
           },
           {
-            path: "/dashboard/campaigns",
+            path: "campaigns",
             element: <Campaigns/>
           },
           {
-            path: "/dashboard/businesses",
+            path: "businesses",
             element: <h1>Businesses</h1>
           }
         ]

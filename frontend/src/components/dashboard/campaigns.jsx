@@ -10,7 +10,7 @@ function Campaigns(){
             <div className="dashboard__campaigns__heading__button">
                 <LinkButton
                     text={"Start a Campaign"}
-                    href={"#"}
+                    href={"/start-a-campaign"}
                     type={"primary"}
                     size={"regular"}
                     iconAfterText={"ph:plus-bold"}

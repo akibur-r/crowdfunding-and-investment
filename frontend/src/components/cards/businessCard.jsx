@@ -23,23 +23,30 @@ function BusinessCard(){
             </div>
 
             <div className="businessCard__finance">
-                <StackedText 
-                    title={"Stock Price"} 
-                    amountInMoney={20} 
-                    size={"small"} 
-                    bgColor={"primary"}
-                />
-                <StackedText
-                    title={"Revenue"} 
-                    amountInMoney={"20M"} 
-                    size={"small"} 
-                    bgColor={"primary"} 
-                />
-
+                    <StackedText 
+                        title={"Stock Price"} 
+                        amountInMoney={20} 
+                        size={"small"} 
+                        bgColor={"secondary"}
+                    />
+                    <StackedText
+                        title={"Revenue"} 
+                        amountInMoney={"20M"} 
+                        size={"small"} 
+                        bgColor={"secondary"} 
+                    />
+                    <StackedText
+                        title={"ROI"} 
+                        amountInNumber={"10%"} 
+                        size={"small"} 
+                        bgColor={"secondary"} 
+                    />
+            </div>
+            <div className="businessCard__viewMore">
                 <LinkButton 
                     text={"View More"}
-                    type={"secondary"}
-                    size={"regular"}
+                    type={"primary"}
+                    size={"small"}
                 />
             </div>
         </div>

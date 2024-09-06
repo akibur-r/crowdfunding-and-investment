@@ -1,8 +1,0 @@
-.dashboardMaster {
-    height: 100%;
-    display: flex;
-
-    & > *:not(:first-child) { //every direct child except the sidebar 
-        padding: 32px;
-    }
-}

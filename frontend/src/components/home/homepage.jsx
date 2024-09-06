@@ -32,7 +32,7 @@ function Homepage(){
         <Campaigns/>
       </div>
 
-      <div className="homepage-businesses"> {/* Yet to build */}
+      <div className="homepage-businesses">
         <Businesses/>
       </div>
 

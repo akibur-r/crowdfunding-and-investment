@@ -6,7 +6,7 @@ function Businesses(){
   return (
     <div className='home__businesses'>
         <div className="businesses-heading">
-            <h3 className="title">Crowdfunding businesses</h3>
+            <h3 className="title">Businesses</h3>
             <h3 className="explore"><Link to="explore">Explore</Link></h3>
         </div>
 
