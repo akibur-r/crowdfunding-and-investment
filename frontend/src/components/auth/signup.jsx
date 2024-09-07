@@ -42,6 +42,7 @@ function SignUp() {
       if (response.ok) {
         const data = await response.json();
         console.log('Success:', data);
+        alert("Signed Up Successfully");
       } else {
         const errorData = await response.json();
         console.error('Error:', errorData.message);

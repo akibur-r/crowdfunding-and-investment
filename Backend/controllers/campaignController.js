@@ -103,4 +103,5 @@ const getAllCampaign = asyncHandler(async (req, res) => {
     }
 });
 
-export { createCampaign, updateCampaign, deleteCampaign, getCampaign, getAllCampaign };
+export { createCampaign, deleteCampaign, getAllCampaign, getCampaign, updateCampaign };
+

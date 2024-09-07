@@ -15,6 +15,10 @@ function CreateCampaign(){
             amount: '',
             deadline: ''
         },
+        faqs: {
+            question: '',
+            answer: ''
+        }
       });
     
       const handleChange = (e) => {
@@ -22,6 +26,19 @@ function CreateCampaign(){
         setFormData({
           ...formData,
           [name]: value
+        });
+      };
+
+      const arrayName = "faqs";
+
+      const handleChangeArray = (e) => {
+        const { name, value } = e.target;
+        setFormData({
+          ...formData,
+          [arrayName]: {
+            ...formData[arrayName],
+            [name]: value
+          }
         });
       };
     
@@ -67,7 +84,7 @@ function CreateCampaign(){
                         <label htmlFor="campaignType" className='largeForm__field__heading'>Campaign Type</label>
                         <div className="largeForm__field__content">
                             <div className="largeForm__field__radioButton">
-                                <input type="radio" value={"Personal"} name="campaignType" id="personal" onSelect={handleChange} />
+                                <input type="radio" value={"Personal"} name="campaignType" id="personal" onChange={handleChange} />
                                 <label htmlFor="personal">Personal</label>
                             </div>
                             <div className="largeForm__field__radioButton">
@@ -77,8 +94,8 @@ function CreateCampaign(){
                         </div>
                     </div>
                     <div className="largeForm__field">
-                        <label htmlFor='campaignCategory' className='largeForm__field__heading'>Category</label>
-                        <select name="campaignCategory" id="campaignCategory" className='largeForm__field__dropdown' onChange={handleChange}>
+                        <label htmlFor='category' className='largeForm__field__heading'>Category</label>
+                        <select name="category" id="category" className='largeForm__field__dropdown' onChange={handleChange}>
                             <option value="none" selected>Select a Category</option>
                             <option value="technology">Technology</option>
                             <option value="science">Science</option>
@@ -133,6 +150,9 @@ function CreateCampaign(){
                 <hr className='horizontalLine' />
                 <div className="largeForm__section__subsection">
                     <span className="largeForm__section__subsection__heading">Frequently asked Questions</span>
+
+                    <input type="text" name='question' id='question' onChange={handleChangeArray} />
+                    <input type="text" name="answer" id="answer" onChange={handleChangeArray} />
                 </div>
             </div>
 

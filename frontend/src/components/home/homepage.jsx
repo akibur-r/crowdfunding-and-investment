@@ -1,11 +1,12 @@
 import LinkButton from '../../components/button/linkButton'
 import StatsBar from '../../components/macro/statsBar'
-import Campaigns from './campaigns'
 import Businesses from './businesses'
+import Campaigns from './campaigns'
 import Footer from './footer'
 import './homepage.scss'
 
 function Homepage(){
+
   return (
     <div className='homepage'>
       <div className="homepage-home">

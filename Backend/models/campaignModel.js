@@ -3,11 +3,11 @@ import mongoose from 'mongoose';
 const faqSchema = mongoose.Schema({
     question: {
         type: String,
-        required: false,
+        required: true,
     },
     answer: {
         type: String,
-        required: false,
+        required: true,
     }
 }, { _id: false });
 
@@ -36,11 +36,11 @@ const campaignSchema = mongoose.Schema({
     fundInformation: {
         amount: {
             type: String,
-            required: false,
+            required: true,
         },
         deadline: {
             type: Date,
-            required: false,
+            required: true,
         },
     },
     faqs: [faqSchema],
