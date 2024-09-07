@@ -1,0 +1,23 @@
+.faq {
+  display: flex;
+  gap: 0.25rem;
+
+  background-color: var(--clr-white-2);
+  padding: 1rem;
+  border-radius: 0.5rem;
+
+  input[type="text"],
+  textarea {
+    min-width: 100%;
+    max-width: 100%;
+  }
+
+  textarea {
+    height: min(10vh, 100%);
+  }
+
+  .faqFirstLine {
+    display: flex;
+    justify-content: space-between;
+  }
+}

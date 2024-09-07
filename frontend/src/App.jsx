@@ -14,7 +14,7 @@ import Dashboard from "./components/dashboard/dashboard";
 import Profile from "./components/dashboard/profile";
 import Sidebar from "./components/dashboard/sidebar";
 import Explore from './components/explore/explore';
-import CreateCampaign from "./components/largeForms/createCampaign";
+import CreateCampaign from "./components/forms/createCampaign";
 
 
 const router = createBrowserRouter([
