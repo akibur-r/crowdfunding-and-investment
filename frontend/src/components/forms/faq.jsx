@@ -1,4 +1,3 @@
-import { Icon } from '@iconify-icon/react/dist/iconify.mjs'
 import './faq.scss'
 
 function Faq(){

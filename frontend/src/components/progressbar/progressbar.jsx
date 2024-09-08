@@ -1,6 +1,9 @@
 import './progressbar.scss'
 
 function Progressbar({progress, barColor, progressColor, barHeight, text}){
+
+  if(progress==100) progressColor = 'accent-red';
+
   return (
     <div className='progressbar'>
         <div className={`bar bc_${barColor} height_px${barHeight}`}>

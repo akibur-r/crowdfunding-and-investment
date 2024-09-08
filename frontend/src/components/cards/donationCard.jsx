@@ -1,14 +1,48 @@
-import { Link } from 'react-router-dom';
+import { Icon } from '@iconify-icon/react/dist/iconify.mjs';
+import { useEffect, useState } from 'react';
 import LinkButton from '../button/linkButton';
 import Progressbar from '../progressbar/progressbar';
 import './card.scss';
 import './donationCard.scss';
-import { Icon } from '@iconify-icon/react/dist/iconify.mjs';
 
-function DonationCard({title, owner, imageSource, raisedAmount, totalAmount, deadline, category}){
+function DonationCard({owner, imageSource, campaignId}){
 
-    if(!category) category = "";
-    else category = <span className='category'>{category}</span>;
+    const [campaign, setCampaign] = useState(false);
+
+  const fetchCampaign = async () => {
+      const response = await fetch(`http://localhost:5000/api/campaign/${campaignId}`);
+      const res = await response.json();
+
+      setCampaign(res);
+  }
+
+  useEffect(() => {
+    fetchCampaign();
+  }, []);
+
+
+
+    let title = "Undefined Title";
+    let deadline = 'N/A';
+    let fundAmount = 0;
+    let raisedAmount = 90;
+    let category = '';
+    let percentage = 0;
+    if(campaign) {
+        title = campaign.title;
+        deadline = 20; //this is a dummy value. Have to configure later
+        category = <span className='category'>{`${campaign.category}`}</span>;
+        
+        if(campaign.fundInformation) {
+            fundAmount = campaign.fundInformation.amount;
+        }
+
+
+        percentage = (raisedAmount / fundAmount) * 100 ;
+
+        console.log(percentage);
+
+    }
     
   return (
     <div className='donationCard card'>
@@ -25,12 +59,12 @@ function DonationCard({title, owner, imageSource, raisedAmount, totalAmount, dea
                 <p className='author'>Author: <span className='authorName'>{owner}</span></p>
             </div>
             <div className='progress-info'>
-                <Progressbar progress={20}/>
+                <Progressbar progress={percentage}/>
 
                 <div className="info">
                     <span className="raisedAmount">${raisedAmount} </span>
                     raised out of
-                    <span className="totalAmount"> ${totalAmount}</span>
+                    <span className="totalAmount"> ${fundAmount} </span>
                 </div>
             </div>
             <div className='donationCard__footer'>
@@ -43,7 +77,7 @@ function DonationCard({title, owner, imageSource, raisedAmount, totalAmount, dea
                     <LinkButton 
                     text={"View More"}
                     type={"primary"}
-                    href={"#"}
+                    href={campaign && `/explore/campaigns/${campaignId}`}
                     size={"small"}
                     />
                 </div>

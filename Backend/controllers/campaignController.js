@@ -92,16 +92,23 @@ const getCampaign = asyncHandler(async (req, res) => {
 // @desc     Get Campaign by ID
 // @route    GET /api/campaign/:id
 // @access   public
-const getAllCampaign = asyncHandler(async (req, res) => {
-    const campaign = await Campaign.find({});
+const getAllCampaign = async (req, res) => {
 
-    if (campaign) {
-        res.status(200).json(campaign);
-    } else {
-        res.status(404);
-        throw new Error('Campaign not found');
+    try {
+        const campaign = await Campaign.find({});
+
+        if (campaign) {
+            res.status(200).json(campaign);
+            // res.status(200).send(campaign);
+            // console.log(campaign);
+        } else {
+            res.status(404);
+            throw new Error('Campaign not found');
+        }
+    } catch (error) {
+        console.log(error);
     }
-});
+};
 
 export { createCampaign, deleteCampaign, getAllCampaign, getCampaign, updateCampaign };
 

@@ -13,8 +13,8 @@ import{
 const router = express.Router();
 
 router.post('/create-campaign', createCampaign);
-router.get('/:id', getCampaign);
 router.get('/all-campaign', getAllCampaign);
+router.get('/:id', getCampaign);
 router.put('/:id', updateCampaign);
 router.delete('/:id', deleteCampaign);
 

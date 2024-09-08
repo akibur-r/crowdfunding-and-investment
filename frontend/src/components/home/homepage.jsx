@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import LinkButton from '../../components/button/linkButton'
 import StatsBar from '../../components/macro/statsBar'
 import Businesses from './businesses'
@@ -7,22 +8,52 @@ import './homepage.scss'
 
 function Homepage(){
 
+  const [loading, setLoading] = useState(false);
+
+  const [campaigns, setCampaigns] = useState([]);
+
+  const fetchCampaigns = async () => {
+    try {
+      setLoading(true);
+      const response = await fetch('http://localhost:5000/api/campaign/all-campaign');
+      const res = await response.json();
+
+      setCampaigns(res);
+    }
+    finally {
+      setLoading(false);
+    }
+  }
+
+  useEffect(() => {
+    fetchCampaigns();
+  }, []);
+
+  // const campaignTitle = campaigns[0].title;
+
+  // console.log(campaigns[0].title);
+
+
   return (
     <div className='homepage'>
       <div className="homepage-home">
+        {
+          loading ? <>Loading...</> : null
+        }
         <div className="home-bg">
           <img src="./images/bg.jpg" alt="" />
         </div>
-
-        <div className="home-content">
-          <h1 className='heading'>Kill The Hunger: <br />A Lifesaving Project</h1>
+        
+          <div className="home-content" >
+          <h1 className='heading'>{campaigns[0] ? `${campaigns[0].title}` :  `Dhur`}</h1>
           <LinkButton 
-          href={"/explore/campaigns/1"}
+          href={campaigns[0] && `/explore/campaigns/${campaigns[0]._id}`}
           type={"primary"}
           text={"See More"}
           size={"regular"}
           />
         </div>
+
       </div>
 
       <div className="homepage-stats">

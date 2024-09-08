@@ -1,8 +1,27 @@
-import './campaigns.scss'
-import DonationCard from '../../components/cards/donationCard'
-import { Link } from 'react-router-dom'
+import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import DonationCard from '../../components/cards/donationCard';
+import './campaigns.scss';
 
 function Campaigns(){
+  const [campaigns, setCampaigns] = useState([]);
+
+  const fetchCampaigns = async () => {
+    try {
+      const response = await fetch('http://localhost:5000/api/campaign/all-campaign');
+      const res = await response.json();
+
+      setCampaigns(res);
+    }
+    catch (e) {
+        console.log(e);
+    }
+  }
+
+  useEffect(() => {
+    fetchCampaigns();
+  }, []);
+
   return (
     <div className='home__campaigns'>
         <div className="campaigns-heading">
@@ -12,48 +31,9 @@ function Campaigns(){
 
         <div className="content">
             <DonationCard
-                title={"This is a test title: Spans two lines"}
+                campaignId={'66dd674a9c495d83bb4b9301'}
                 owner={"Akib"}
                 imageSource={"./images/bg.jpg"}
-                totalAmount={20}
-                raisedAmount={1}
-                deadline={20}
-                category={"Charity"}
-            />
-            <DonationCard
-                title={"This is a test title: Spans two lines"}
-                owner={"Akib"}
-                imageSource={"./images/bg.jpg"}
-                totalAmount={20}
-                raisedAmount={1}
-                deadline={20}
-                category={"Technology"}
-            />
-            <DonationCard
-                title={"This is a test title: Spans two lines"}
-                owner={"Akib"}
-                imageSource={"./images/bg.jpg"}
-                totalAmount={20}
-                raisedAmount={1}
-                deadline={20}
-                category={"Science"}
-            />
-            <DonationCard
-                title={"This is a test title: Spans two lines"}
-                owner={"Akib"}
-                imageSource={"./images/bg.jpg"}
-                totalAmount={20}
-                raisedAmount={1}
-                deadline={20}
-                category={"Finance"}
-            />
-            <DonationCard
-                title={"This is a test title: Spans two lines"}
-                owner={"Akib"}
-                imageSource={"./images/bg.jpg"}
-                totalAmount={20}
-                raisedAmount={1}
-                deadline={20}
             />
         </div>
     </div>

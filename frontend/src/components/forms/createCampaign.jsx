@@ -2,8 +2,8 @@ import { Icon } from '@iconify-icon/react/dist/iconify.mjs';
 import { useState } from 'react';
 import SubmitButton from '../button/submitButton';
 import './createCampaign.scss';
-import './largeForm.scss';
 import Faq from './faq';
+import './largeForm.scss';
 
 function CreateCampaign(){
     const [formData, setFormData] = useState({
@@ -30,7 +30,10 @@ function CreateCampaign(){
         setFAQs([...faqs, <><Faq/></>])
       };
 
-      const deleteFAQ = () => {
+      const deleteFAQ = (idx) => {
+        setFAQs(prev => {
+          return prev.filter((p,i) => i != idx);
+        })
       }
     
       const handleChange = (e) => {
@@ -167,7 +170,9 @@ function CreateCampaign(){
                       {
                         faqs.map( (faq, idx) => (
                           <div key={idx} className='faq'>
-                            <button type='button' className="deleteButton" onClick={deleteFAQ(idx)}>
+                            <button type='button' disabled={faqs.length == 1} className="deleteButton" onClick={() => {
+                              deleteFAQ(idx)
+                            }}>
                               <Icon icon={"charm:cross"} className='icon'/>
                             </button>
                             {faq}

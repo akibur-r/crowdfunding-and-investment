@@ -3,11 +3,11 @@ import mongoose from 'mongoose';
 const faqSchema = mongoose.Schema({
     question: {
         type: String,
-        required: true,
+        required: false,
     },
     answer: {
         type: String,
-        required: true,
+        required: false,
     }
 }, { _id: false });
 

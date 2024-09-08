@@ -29,6 +29,13 @@
           background-color: var(--clr-accent-red);
           color: var(--clr-white);
         }
+
+        &:disabled {
+          .icon {
+            background-color: var(--clr-gray-3);
+            cursor: not-allowed;
+          }
+        }
       }
 
       .addMoreButton {
