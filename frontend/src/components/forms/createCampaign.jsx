@@ -112,9 +112,11 @@ function CreateCampaign(){
                         <label htmlFor='category' className='largeForm__field__heading'>Category</label>
                         <select name="category" id="category" className='largeForm__field__dropdown' onChange={handleChange}>
                             <option value="none" selected>Select a Category</option>
-                            <option value="technology">Technology</option>
-                            <option value="science">Science</option>
-                            <option value="science">Science</option>
+                            <option value="Technology">Technology</option>
+                            <option value="Science">Science</option>
+                            <option value="Charity">Charity</option>
+                            <option value="Medical">Medical</option>
+                            <option value="Art">Art</option>
                         </select>
                     </div>
                 </div>

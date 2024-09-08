@@ -25,7 +25,8 @@
 
     .text {
         position: absolute;
-        font-size: 0.9em;
+        font-size: 0.8em;
+        padding-left: 0.5rem;
     }
 
     //primary background
@@ -72,6 +73,14 @@
     }
     
     .pc_secondary, .pc_white-1, .pc_white-2, .pc_white-3, .pc_white {
+        color: black;
+    }
+
+    .txt_white {
+        color: white;
+    }
+
+    .txt_black {
         color: black;
     }
 

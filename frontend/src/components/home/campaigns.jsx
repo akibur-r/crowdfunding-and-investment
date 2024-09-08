@@ -31,9 +31,24 @@ function Campaigns(){
 
         <div className="content">
             <DonationCard
-                campaignId={'66dd674a9c495d83bb4b9301'}
+                campaignId={campaigns[0] && `${campaigns[0]._id}`}
                 owner={"Akib"}
-                imageSource={"./images/bg.jpg"}
+                imageSource={"./images/bg.webp"}
+            />
+            <DonationCard
+                campaignId={campaigns[1] && `${campaigns[1]._id}`}
+                owner={"Akib"}
+                imageSource={"./coverImages/2.png"}
+            />
+            <DonationCard
+                campaignId={campaigns[2] && `${campaigns[2]._id}`}
+                owner={"Akib"}
+                imageSource={"./coverImages/1.png"}
+            />
+            <DonationCard
+                campaignId={campaigns[0] && `${campaigns[0]._id}`}
+                owner={"Akib"}
+                imageSource={"./coverImages/2.png"}
             />
         </div>
     </div>

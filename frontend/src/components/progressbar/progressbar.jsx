@@ -1,15 +1,15 @@
-import './progressbar.scss'
+import './progressbar.scss';
 
-function Progressbar({progress, barColor, progressColor, barHeight, text}){
+function Progressbar({progress, barColor, progressColor, barHeight, text, txtColor}){
 
   if(progress==100) progressColor = 'accent-red';
 
   return (
     <div className='progressbar'>
-        <div className={`bar bc_${barColor} height_px${barHeight}`}>
+        <div className={`bar bc_${barColor} height_px${barHeight} txt_${txtColor}`}>
             <span className={`progress pc_${progressColor}`} style={{width: `${progress}%`}} >
-              <span className='text'>{text}</span>
             </span>
+              <span className='text'>{text}</span>
             
         </div>
     </div>

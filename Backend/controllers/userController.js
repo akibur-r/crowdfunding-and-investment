@@ -1,6 +1,6 @@
 import asyncHandler from 'express-async-handler';
-import generateToken from '../utils/generateToken.js'
-import User from '../models/userModel.js'
+import User from '../models/userModel.js';
+import generateToken from '../utils/generateToken.js';
 
 
 // @desc     Auth user/set token
@@ -81,13 +81,19 @@ const logoutUser=asyncHandler(async(req,res)=>{
 // route     GET /api/users/profile
 // @access   private
 const getUserProfile=asyncHandler(async(req,res)=>{
-    const user={
-        _id:req.user._id,
-        name: req.user.name,
-        email: req.user.email,
-        phoneNumber: req.user.phoneNumber
-    };
-    res.status(200).json(user);
+    try {
+        const user={
+            _id:req.user._id,
+            name: req.user.name,
+            email: req.user.email,
+            phoneNumber: req.user.phoneNumber
+        };
+        res.status(200).json(user);
+        console.log("profile fetch success");
+    } catch (error) {
+        res.status(400).send("error");
+        console.log(error);
+    }
 });
 
 // @desc     Update user profile 
@@ -115,10 +121,6 @@ const updateUserProfile=asyncHandler(async(req,res)=>{
     }
 });
 
-export{
-    authUser,
-    registerUser,
-    logoutUser,
-    getUserProfile,
-    updateUserProfile
+export {
+    authUser, getUserProfile, logoutUser, registerUser, updateUserProfile
 };

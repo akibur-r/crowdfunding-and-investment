@@ -21,6 +21,7 @@ function Finance({raisedPercentage, remainingDays, donationGoal, raisedAmount}){
           <ProgressBar 
             progress={raisedPercentage}
             barColor={"white"}
+            txtColor={"black"}
             progressColor={"secondary"}
             barHeight={24}
             text={`$${raisedAmount} raised of $${donationGoal}`}

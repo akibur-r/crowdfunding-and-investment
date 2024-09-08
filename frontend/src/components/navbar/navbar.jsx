@@ -3,6 +3,7 @@ import LinkButton from "../button/linkButton";
 import "./navbar.scss";
 
 function Navbar() {
+
     return (
         <nav>
             <div className="left">
@@ -31,7 +32,7 @@ function Navbar() {
                     type={"primary"}
                     href={"/auth/signup"}
                     size={"regular"}
-                />
+                />  
             </div>   
         </nav>
     )

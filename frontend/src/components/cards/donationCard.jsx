@@ -22,21 +22,24 @@ function DonationCard({owner, imageSource, campaignId}){
 
 
 
-    let title = "Undefined Title";
+    let title = `This is a Default Title: No Data Retrieved`;
     let deadline = 'N/A';
     let fundAmount = 0;
-    let raisedAmount = 90;
+    let raisedAmount = 10;
     let category = '';
     let percentage = 0;
-    if(campaign) {
+
+    if(campaign._id == campaignId) {
         title = campaign.title;
         deadline = 20; //this is a dummy value. Have to configure later
-        category = <span className='category'>{`${campaign.category}`}</span>;
+
+        if(campaign.category) {
+            category = <span className='category'>{`${campaign.category}`}</span>;
+        }
         
         if(campaign.fundInformation) {
             fundAmount = campaign.fundInformation.amount;
         }
-
 
         percentage = (raisedAmount / fundAmount) * 100 ;
 

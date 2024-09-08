@@ -3,34 +3,95 @@ import Menu from '../commonComponents/menu'
 import Donor from './donor'
 import Finance from './finance'
 import Overview from './overview'
-import Test from './test'
 import './viewCampaign.scss'
 
+import { useEffect, useState } from 'react'
+import { useLocation } from 'react-router-dom'
+
+
 function ViewCampaign(){
+
+  const LastUrlSegment = () => {
+    const location = useLocation();
+    const pathSegments = location.pathname.split('/');
+    const lastSegment = pathSegments[pathSegments.length - 1];
+    return lastSegment
+  };
+
+  const campaignId = LastUrlSegment();
+
+  const [campaign, setCampaign] = useState([]);
+
+  const fetchCampaign = async () => {
+    try {
+      // setLoading(true);
+      const response = await fetch(`http://localhost:5000/api/campaign/${campaignId}`);
+      const res = await response.json();
+
+      setCampaign(res);
+    }
+    finally {
+      // setLoading(false);
+    }
+  }
+
+  useEffect(() => {
+    fetchCampaign();
+  }, []);
+
+  let campaignTitle = 'Default Title';
+  let campaignType = '';
+  let campaignCategory = '';
+  let fundAmount = 0;
+  let raisedAmount = 0;
+  let campaignCreated = '';
+  let campaignDescription = 'No Description';
+  let coverImage = '';
+
+  if(campaign) {
+    campaignTitle = campaign.title;
+    campaignCategory = campaign.category;
+    campaignType = campaign.campaignType;
+    campaignDescription = campaign.description;
+    coverImage = campaign.coverImage;
+
+    if(campaign.fundInformation) {
+      fundAmount = campaign.fundInformation.amount;
+    }
+
+    const temp = String(campaign.createdAt);
+
+    campaignCreated = temp.split('T');
+    campaignCreated = campaignCreated[0];
+
+  }
+
+  const percentage = (raisedAmount / fundAmount) * 100 ;
+
   return (
     <div className='viewCampaign'>
         {/* Overview section is in overview.jsx file */}
         <div className="viewCampaign__overview">
           <Overview
-            thumbnailSrc={"./../../images/bg.jpg"}
-            category={"Charity"} type={"Personal"}
-            title={"Kill the Hunger: A Lifesaving Project"}
-            ownerProfilePicSrc={"./images/shafayet.png"}
-            ownerName={"Shafayet Nur"}
-            ownerCampaigns={8}
+            thumbnailSrc={`/coverImages/${coverImage}`}
+            category={campaignCategory} type={campaignType}
+            title={campaignTitle}
+            ownerProfilePicSrc={"/images/akib.png"}
+            ownerName={"Akibur Rahman"}
+            ownerCampaigns={2}
             ownerAddress={"Chittagong, Bangladesh"}
-            target={100000}
-            createdAt={"11/12/2013"}
+            target={`${fundAmount}`}
+            createdAt={campaignCreated}
           />
         </div>
 
         {/* Finance section is in finance.jsx file */}
         <div className="viewCampaign__finance">
           <Finance
-            raisedPercentage={64}
+            raisedPercentage={percentage}
             remainingDays={17}
-            donationGoal={100000}
-            raisedAmount={100}
+            donationGoal={fundAmount}
+            raisedAmount={raisedAmount}
           />
         </div>
 
@@ -39,7 +100,7 @@ function ViewCampaign(){
             <div className="details" id='details'>
               <Menu isFor={"campaign"}/>
               <div id="description" className='description'>
-                <Test/>
+                <pre>{campaignDescription}</pre>
                 <FAQ/> 
               </div>
             </div>

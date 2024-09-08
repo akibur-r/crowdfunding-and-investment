@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
 import SubmitButton from '../button/submitButton';
 import './auth.scss';
 import './login.scss';
@@ -29,13 +29,16 @@ function Login() {
         },
         body: JSON.stringify(formData),
         credentials: 'include',
+        
       });
 
       if (response.ok) {
         const data = await response.json();
         console.log('Success:', data);
-        alert('Successfully Login')
+        alert('Successfully Login');
         // Handle success (e.g., save token, redirect to dashboard)
+        
+        
       } else {
         const errorData = await response.json();
         console.error('Error:', errorData.message);
