@@ -10,10 +10,32 @@ const router = express.Router();
 const createCampaign = asyncHandler(async (req, res) => {
     const { campaignType, category, title, coverImage, description, amount, deadline, faqs } = req.body;
 
+    if(title.length > 20){
+        return res.status(400).json({
+            message: 'Titile must be in 20 characters'
+        })
+    }
+
+    const currentDate = new Date();
+    const campaignDeadline = new Date(deadline);
+
+    if (campaignDeadline <= currentDate) {
+        return res.status(400).json({
+            message: 'Deadline must be a future date'
+        })
+    }
+
+    if (amount > 10000000) {
+        return res.status(400).json({
+            message: 'Amount must be less than or equal to 10,000,000'
+        })
+    }
+    
     const campaignExists = await Campaign.findOne({ title });
     if (campaignExists) {
-        res.status(400);
-        throw new Error('Campaign already exists');
+        return res.status(400).json({
+            message:'Campaign already exists'
+        })
     }
 
     const campaign = await Campaign.create({

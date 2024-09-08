@@ -30,20 +30,34 @@ const authUser=asyncHandler(async(req,res)=>{
 const registerUser = asyncHandler(async (req, res) => {
     const { name, email, password, phoneNumber, confirmPassword } = req.body;
 
-    // Check if user already exists
+    
     const userExists = await User.findOne({ email });
     if (userExists) {
         res.status(400);
         throw new Error('User already exists');
     }
-    // Validate password and confirmPassword match
+    
     if (password !== confirmPassword) {
         return res.status(400).json({
             message: "Password and confirm password do not match"
         });
     }
 
-    // Create user
+    const allowedDomains = ['gmail.com', 'email.com', 'yahoo', 'outmail'];
+    const emailDomain = email.split('@')[1];
+    if (!allowedDomains.includes(emailDomain)) {
+        return res.status(400).json({
+            message: "Email domain is not correct"
+        });
+    }
+
+    if (password.length <= 8) {
+        return res.status(400).json({
+            message: "Password must be more than 8 characters"
+        });
+    }
+
+
     const user = await User.create({
         name,
         phoneNumber,
